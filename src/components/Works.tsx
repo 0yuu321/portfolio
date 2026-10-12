@@ -83,18 +83,6 @@ export function Works() {
         <div className="works-list">
           {works.map((work) => (
             <article className="card work-card" key={work.title}>
-              <div className="screenshot-gallery" aria-label={`${work.title}のスクリーンショット`}>
-                {work.screenshots.map((screenshot, index) => (
-                  <figure
-                    className={index === 0 ? "screenshot-item featured" : "screenshot-item"}
-                    key={screenshot.src}
-                  >
-                    <img src={screenshot.src} alt={screenshot.alt} />
-                    <figcaption>{screenshot.caption}</figcaption>
-                  </figure>
-                ))}
-              </div>
-
               <div className="work-content">
                 <div className="work-title-row">
                   <div>
@@ -157,6 +145,18 @@ export function Works() {
                 </div>
 
                 {work.note && <p className="work-note">{work.note}</p>}
+              </div>
+
+              <div className="screenshot-gallery" aria-label={`${work.title}のスクリーンショット`}>
+                {work.screenshots.map((screenshot, index) => (
+                  <figure
+                    className={index === 0 ? "screenshot-item featured" : "screenshot-item"}
+                    key={screenshot.src}
+                  >
+                    <img src={screenshot.src} alt={screenshot.alt} />
+                    <figcaption>{screenshot.caption}</figcaption>
+                  </figure>
+                ))}
               </div>
             </article>
           ))}

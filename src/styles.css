@@ -103,13 +103,6 @@ a {
   align-items: center;
 }
 
-.hero-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1.28fr) minmax(280px, 0.72fr);
-  gap: 56px;
-  align-items: center;
-}
-
 .hero-copy {
   max-width: 760px;
 }
@@ -199,26 +192,6 @@ h4 {
   background: var(--accent-dark);
   box-shadow: 0 16px 34px rgba(37, 99, 235, 0.22);
   transform: translateY(-1px);
-}
-
-.hero-panel {
-  display: grid;
-  gap: 14px;
-  border: 1px solid var(--border);
-  border-radius: 18px;
-  background: linear-gradient(180deg, #ffffff 0%, var(--surface-soft) 100%);
-  padding: 28px;
-  box-shadow: var(--shadow);
-}
-
-.hero-panel span {
-  display: block;
-  border: 1px solid #d7e4f7;
-  border-radius: 8px;
-  background: #ffffff;
-  color: #2d405c;
-  font-weight: 700;
-  padding: 14px 16px;
 }
 
 .about {
@@ -500,15 +473,6 @@ h4 {
     padding-top: 82px;
   }
 
-  .hero-grid {
-    grid-template-columns: 1fr;
-    gap: 38px;
-  }
-
-  .hero-panel {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
   .strength-grid,
   .skill-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -567,7 +531,6 @@ h4 {
     width: 100%;
   }
 
-  .hero-panel,
   .strength-grid,
   .skill-grid,
   .contact-grid {
@@ -597,10 +560,6 @@ h4 {
 
   .feature-list {
     grid-template-columns: 1fr;
-  }
-
-  .hero-panel {
-    padding: 20px;
   }
 
   .strength-card,

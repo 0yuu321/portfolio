@@ -11,7 +11,7 @@ export function Header() {
     <header className="site-header">
       <nav className="nav container" aria-label="メインナビゲーション">
         <a className="brand" href="#home" aria-label="HOMEへ移動">
-          Shiyu Homma
+          Shuu Honma
         </a>
         <ul className="nav-list">
           {navItems.map((item) => (

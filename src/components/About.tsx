@@ -125,6 +125,9 @@ export function About() {
               </li>
             ))}
           </ul>
+          <p className="skills-learning-note">
+            現在は、TypeScriptとPythonを中心に学習を進めており、自力でWebアプリケーションを設計・実装できるレベルを目指しています。
+          </p>
         </div>
       </div>
     </section>

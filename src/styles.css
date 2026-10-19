@@ -347,6 +347,14 @@ h4 {
   color: var(--accent-dark);
 }
 
+.skills-learning-note {
+  margin: 20px 0 0;
+  color: var(--muted);
+  font-size: 0.94rem;
+  line-height: 1.9;
+  overflow-wrap: anywhere;
+}
+
 .tag-list {
   display: flex;
   flex-wrap: wrap;

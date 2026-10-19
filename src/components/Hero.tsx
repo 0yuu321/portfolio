@@ -1,7 +1,9 @@
+import { CodeEditor } from "./CodeEditor";
+
 export function Hero() {
   return (
     <section id="home" className="hero section">
-      <div className="container">
+      <div className="container home-layout">
         <div className="hero-copy">
           <p className="section-kicker">Portfolio</p>
           <h1>本間 志悠</h1>
@@ -17,6 +19,7 @@ export function Hero() {
             作品を見る
           </a>
         </div>
+        <CodeEditor />
       </div>
     </section>
   );

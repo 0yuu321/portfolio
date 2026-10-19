@@ -83,6 +83,28 @@ export function About() {
           ))}
         </div>
 
+        <section className="about-photos" aria-labelledby="drone-photos-heading">
+          <h3 id="drone-photos-heading">ドローン競技大会の様子</h3>
+          <div className="about-photo-grid">
+            <img
+              src="/about-images/drone-competition-venue.jpg"
+              alt="ドローン競技大会の会場に設置されたゲートや障害物のある競技コース"
+              width={5120}
+              height={3413}
+              loading="lazy"
+              decoding="async"
+            />
+            <img
+              src="/about-images/drone-competition-course.jpg"
+              alt="ドローン競技大会で障害物やボールが配置されたコースを飛行するドローン"
+              width={5120}
+              height={3415}
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </section>
+
         <div id="skills" className="skills-section">
           <div className="section-heading compact">
             <p className="section-kicker">Skills</p>

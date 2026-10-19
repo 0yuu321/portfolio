@@ -15,9 +15,6 @@ export function Hero() {
             <br />
             将来は、企画・設計から開発まで幅広く携わり、自分のアイデアをWebサービスとして実現できるフルスタックエンジニアを目指しています。
           </p>
-          <a className="primary-button" href="#works">
-            作品を見る
-          </a>
         </div>
         <CodeEditor />
       </div>

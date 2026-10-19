@@ -224,7 +224,7 @@ h4 {
 }
 
 .skill-grid {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .card {
@@ -266,6 +266,7 @@ h4 {
 }
 
 .skill-card {
+  min-width: 0;
   padding: 22px;
 }
 
@@ -273,6 +274,77 @@ h4 {
   margin-bottom: 16px;
   color: var(--accent-dark);
   font-size: 1rem;
+}
+
+.skill-list {
+  display: grid;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.skill-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px 16px;
+}
+
+.skill-name {
+  min-width: 0;
+  color: #172033;
+  font-size: 0.94rem;
+  overflow-wrap: anywhere;
+}
+
+.skill-rating {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 10px;
+}
+
+.skill-bar {
+  display: grid;
+  grid-template-columns: repeat(5, 14px);
+  gap: 4px;
+}
+
+.skill-segment {
+  width: 14px;
+  height: 14px;
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  background: var(--accent-soft);
+}
+
+.skill-segment.filled {
+  border-color: var(--accent);
+  background: var(--accent);
+}
+
+.skill-level {
+  min-width: 32px;
+  color: var(--accent-dark);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.skill-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  margin: 24px 0 0;
+  padding: 0;
+  color: var(--muted);
+  font-size: 0.8rem;
+  list-style: none;
+}
+
+.skill-legend strong {
+  color: var(--accent-dark);
 }
 
 .tag-list {

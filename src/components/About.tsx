@@ -19,20 +19,47 @@ const strengths = [
 const skillGroups = [
   {
     category: "Frontend",
-    skills: ["HTML", "CSS", "JavaScript", "TypeScript", "React"],
+    skills: [
+      { name: "HTML", level: 3 },
+      { name: "CSS", level: 3 },
+      { name: "JavaScript", level: 3 },
+      { name: "TypeScript", level: 3 },
+      { name: "React", level: 2 },
+    ],
   },
   {
     category: "Backend",
-    skills: ["Python", "FastAPI", "Google Apps Script"],
+    skills: [
+      { name: "Python", level: 3 },
+      { name: "FastAPI", level: 2 },
+      { name: "Google Apps Script", level: 2 },
+      { name: "Java", level: 1 },
+    ],
   },
   {
     category: "Database",
-    skills: ["MySQL", "DynamoDB", "Google Spreadsheet"],
+    skills: [
+      { name: "MySQL", level: 3 },
+      { name: "DynamoDB", level: 1 },
+    ],
   },
   {
     category: "Cloud / Tools",
-    skills: ["AWS", "Git", "GitHub", "Figma"],
+    skills: [
+      { name: "AWS", level: 2 },
+      { name: "GitHub", level: 3 },
+      { name: "Figma", level: 3 },
+      { name: "Google スプレッドシート", level: 2 },
+    ],
   },
+];
+
+const skillLevels = [
+  "基礎知識あり",
+  "学習・演習経験あり",
+  "調べながら実装可能",
+  "自力で設計・実装可能",
+  "応用的な開発が可能",
 ];
 
 export function About() {
@@ -66,16 +93,38 @@ export function About() {
             {skillGroups.map((group) => (
               <article className="card skill-card" key={group.category}>
                 <h3>{group.category}</h3>
-                <div className="tag-list">
+                <ul className="skill-list">
                   {group.skills.map((skill) => (
-                    <span className="skill-tag" key={skill}>
-                      {skill}
-                    </span>
+                    <li className="skill-row" key={skill.name}>
+                      <span className="skill-name">{skill.name}</span>
+                      <span
+                        className="skill-rating"
+                        role="img"
+                        aria-label={`習熟度 Lv.${skill.level} / 5：${skillLevels[skill.level - 1]}`}
+                      >
+                        <span className="skill-bar" aria-hidden="true">
+                          {skillLevels.map((description, index) => (
+                            <span
+                              className={`skill-segment${index < skill.level ? " filled" : ""}`}
+                              key={description}
+                            />
+                          ))}
+                        </span>
+                        <span className="skill-level" aria-hidden="true">Lv.{skill.level}</span>
+                      </span>
+                    </li>
                   ))}
-                </div>
+                </ul>
               </article>
             ))}
           </div>
+          <ul className="skill-legend" aria-label="習熟度の基準">
+            {skillLevels.map((description, index) => (
+              <li key={description}>
+                <strong>Lv.{index + 1}</strong>：{description}
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </section>
